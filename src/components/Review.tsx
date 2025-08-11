@@ -1,12 +1,15 @@
 interface reviewProps {
+  id: number;
   randomUUID: string;
   mbtiType: string;
   comment: string;
 }
 function Review({ randomUUID, mbtiType, comment }: reviewProps) {
   return (
-    <div>
-      <img src="" alt="profile picture" />
+    <div className="flex">
+      <div>
+        <img src="" alt="profile picture" />
+      </div>
       <div>
         <p>{randomUUID}</p>
         <p>test result: {mbtiType}</p>

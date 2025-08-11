@@ -1,15 +1,17 @@
+import { NavLink } from "react-router";
+
 function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="">Home</a>
+    <nav className="mx-16">
+      <ul className="flex justify-between gap-8">
+        <li className="my-4">
+          <NavLink to="/test">Take the test</NavLink>
         </li>
-        <li>
-          <a href="">Cities</a>
+        <li className="my-4">
+          <NavLink to="/cities">Cities</NavLink>
         </li>
-        <li>
-          <a href="">About Us</a>
+        <li className="my-4">
+          <NavLink to="/about">About Us</NavLink>
         </li>
       </ul>
     </nav>

@@ -1,4 +1,12 @@
+import MainBanner from "../components/MainBanner";
+import ReviewSection from "../components/ReviewSection";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <MainBanner />
+      <ReviewSection />
+    </div>
+  );
 }
 export default Home;
