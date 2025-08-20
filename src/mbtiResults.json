@@ -1,0 +1,114 @@
+{
+  "ISTJ": {
+    "Title": "The Logistician",
+    "Matched City": "Ottawa",
+    "result": "You're dependable, logical, and grounded. Ottawa's structured, safe, and intellectually focused environment mirrors your love of order and responsibility. As Canada's capital, it offers stable careers, historic neighborhoods, and meaningful traditions — a perfect match for your sense of duty and long-term planning. You'll thrive where rules are respected, and systems run smoothly. ",
+    "Travel Recommendation": " Quebec City - for its heritage and formality.",
+    "Less Compatible": " St. John's - its spontaneity and unpredictability may feel unsettling."
+  },
+  "ISFJ": {
+    "Title": "The Defender",
+    "Matched City": "Charlottetown",
+    "result": "You're thoughtful, devoted, and service-oriented. Charlottetown's quiet charm and strong community bonds provide the kind of caring, close-knit atmosphere you cherish. You thrive in settings where kindness matters, and routines are predictable. This small capital city allows you to build deep roots while contributing to your surroundings in meaningful ways. ",
+    "Travel Recommendation": " Victoria - a peaceful, artistic escape.",
+    "Less Compatible": " Calgary - its fast pace and competitive energy may overwhelm you."
+  },
+  "INFJ": {
+    "Title": "The Advocate",
+    "Matched City": "Victoria",
+    "result": "You're insightful, imaginative, and drawn to purpose. Victoria's graceful scenery, literary feel, and artsy atmosphere allow your reflective and idealistic self to flourish. As a city that embraces creativity, social values, and tranquility, you'll find space to live authentically while engaging in causes that matter to you. ",
+    "Travel Recommendation": " Iqaluit - for introspection and solitude.",
+    "Less Compatible": " Toronto - overstimulation may drain your emotional energy."
+  },
+  "INTJ": {
+    "Title": "The Architect",
+    "Matched City": "Ottawa",
+    "result": "You're strategic, disciplined, and deeply thoughtful. Ottawa's stable infrastructure, academic opportunities, and quiet professionalism make it an ideal home for someone who thrives on long-term planning and depth. This capital city's quiet efficiency supports your need for independent problem-solving and intellectual growth. ",
+    "Travel Recommendation": " Montreal - stimulating and culturally diverse.",
+    "Less Compatible": " Charlottetown - may feel too small or limited in vision."
+  },
+  "ISTP": {
+    "Title": "The Virtuoso",
+    "Matched City": "Calgary",
+    "result": "You're adventurous, practical, and action-oriented. Calgary's rugged outdoors and entrepreneurial spirit give you space to explore, tinker, and adapt on the go. Whether it's hiking, skiing, or engaging in hands-on work, this city supports your love of freedom and efficiency. ",
+    "Travel Recommendation": " Whitehorse - perfect for solo exploration and nature.",
+    "Less Compatible": " Quebec City - may feel too romanticized or rigid."
+  },
+  "ISFP": {
+    "Title": "The Adventurer",
+    "Matched City": "Victoria",
+    "result": "You're artistic, gentle, and highly attuned to beauty. Victoria's coastal elegance, blooming gardens, and quiet creativity align with your need for personal space and artistic expression. The peaceful rhythms here allow you to feel free and emotionally balanced, while still finding inspiration in nature and community. ",
+    "Travel Recommendation": " Saint John - a cozy coastal city with soul.",
+    "Less Compatible": " Winnipeg - its structure and climate might feel uninspiring."
+  },
+  "INFP": {
+    "Title": "The Mediator",
+    "Matched City": "Victoria",
+    "result": "You're introspective, values-driven, and compassionate. Victoria gives you a safe, serene backdrop to live in alignment with your ideals. The pace is slow, the energy is gentle, and artistic expression is celebrated — all of which provide you the right environment to dream, create, and connect deeply. ",
+    "Travel Recommendation": " Quebec City - full of magic and meaning.",
+    "Less Compatible": " Toronto - may feel too commercial or chaotic."
+  },
+  "INTP": {
+    "Title": "The Thinker",
+    "Matched City": "Montreal",
+    "result": "You're intellectual, unconventional, and drawn to complexity. Montreal offers academic richness, multicultural energy, and room for abstract thinking. It's a place where you can get lost in thought, meet diverse minds, and invent new systems — all while enjoying independence and stimulation. ",
+    "Travel Recommendation": " Yellowknife - quiet for deep contemplation.",
+    "Less Compatible": " Regina - may feel too routine or repetitive."
+  },
+  "ESTP": {
+    "Title": "The Dynamo",
+    "Matched City": "Calgary",
+    "result": "You're bold, resourceful, and love a challenge. Calgary offers high-paced energy, access to adventure, and a business-forward mindset — a perfect combo for your spontaneous and thrill-seeking nature. You'll thrive in its modern edge and natural surroundings. ",
+    "Travel Recommendation": " Whistler - full of fun and action.",
+    "Less Compatible": " Iqaluit - its quiet lifestyle may feel too limiting."
+  },
+  "ESFP": {
+    "Title": "The Entertainer",
+    "Matched City": "Toronto",
+    "result": "You're lively, warm, and love excitement. Toronto's buzz, diversity, and endless social scenes feed your need for fun and people. You'll find purpose in entertainment, hospitality, or cultural events — anything that lets you connect and enjoy life in real time. ",
+    "Travel Recommendation": " Montreal - a party with depth.",
+    "Less Compatible": " Yellowknife - may lack stimulation and connection."
+  },
+  "ENFP": {
+    "Title": "The Campaigner",
+    "Matched City": "Montreal",
+    "result": "You're energetic, expressive, and love novelty. Montreal's creative, eclectic feel gives you the freedom to explore, dream, and engage with new people and ideas every day. It's a place where life is art, and spontaneity is welcomed. ",
+    "Travel Recommendation": " St. John's - colorful and full of personality.",
+    "Less Compatible": " Winnipeg - may feel too limiting or conventional."
+  },
+  "ENTP": {
+    "Title": "The Debater",
+    "Matched City": "Toronto",
+    "result": "You're witty, innovative, and always on the hunt for the next idea. Toronto's business scene, cultural platforms, and international flair will give you the challenges and variety you crave. From debates to startups, it's your playground of ideas. ",
+    "Travel Recommendation": " Vancouver - innovation meets nature.",
+    "Less Compatible": " Saskatoon - may feel too quiet or restrictive."
+  },
+  "ESTJ": {
+    "Title": "The Executive",
+    "Matched City": "Calgary",
+    "result": "You're driven, organized, and a natural leader. Calgary's strong economic scene, efficient systems, and sense of order suit your style. You'll find growth through clear roles, goals, and the opportunity to take charge. ",
+    "Travel Recommendation": " Ottawa - orderly with purpose.",
+    "Less Compatible": " Saint John - may feel too slow-paced."
+  },
+  "ESFJ": {
+    "Title": "The Consul",
+    "Matched City": "Halifax",
+    "result": "You're generous, community-focused, and value harmony. Halifax's kind-hearted culture and collaborative atmosphere will make you feel at home. You thrive where you can care for others, participate in events, and create lasting connections. ",
+    "Travel Recommendation": " Charlottetown - warm and welcoming.",
+    "Less Compatible": " Iqaluit - its remoteness may feel isolating."
+  },
+  "ENFJ": {
+    "Title": "The Protagonist",
+    "Matched City": "Ottawa",
+    "result": "You're inspirational, compassionate, and naturally drawn to people. Ottawa's professional, civic-minded energy aligns with your desire to lead with meaning and make a difference. You'll find fulfillment in its balance of structure and social opportunity, where community meets action. ",
+    "Travel Recommendation": " Montreal - perfect for connection and culture.",
+    "Less Compatible": " Yellowknife - may feel too disconnected from others."
+  },
+  "ENTJ": {
+    "Title": "The Commander",
+    "Matched City": "Toronto",
+    "result": "You're confident, assertive, and future-focused. Toronto's fast-paced environment, access to leadership roles, and big-picture energy match your ambition and strategy. It's a launchpad for innovation and personal achievement. ",
+    "Travel Recommendation": " Vancouver - success meets serenity.",
+    "Less Compatible": " Charlottetown - may feel too small and static."
+  }
+}
