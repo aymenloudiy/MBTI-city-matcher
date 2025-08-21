@@ -1,4 +1,29 @@
-function Cities() {
-  return <div>Cities</div>;
+import { useState } from "react";
+import { cities } from "../data/cities";
+import type { City } from "../types/city";
+import CityBlock from "../components/CityBlock";
+import CityModal from "../components/CityModal";
+
+export default function CitiesPage() {
+  const [selected, setSelected] = useState<City | null>(null);
+
+  return (
+    <main className="mx-auto max-w-7xl px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-3xl font-bold tracking-tight">Cities</h1>
+        <p className="mt-2 text-gray-600">Click a city to learn more.</p>
+      </header>
+
+      <section
+        className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        aria-label="City grid"
+      >
+        {cities.map((c) => (
+          <CityBlock key={c.id} city={c} onSelect={setSelected} />
+        ))}
+      </section>
+
+      <CityModal city={selected} onClose={() => setSelected(null)} />
+    </main>
+  );
 }
-export default Cities;
