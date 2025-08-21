@@ -11,7 +11,9 @@ function Header() {
           </h1>
         </NavLink>
       </div>
-      <Navbar />
+      <div className="mr-8">
+        <Navbar />
+      </div>
     </header>
   );
 }

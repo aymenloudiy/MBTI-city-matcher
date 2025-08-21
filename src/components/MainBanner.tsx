@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 function MainBanner() {
   return (
-    <section className="flex grow self-stretch bg-gradient-to-r from-[#003366] to-[#1a1a1a] px-16 py-20 my-12 rounded-2xl shadow-lg">
+    <section className="flex grow self-stretch bg-gradient-to-r from-[#C62828] to-[#2b0d0d] px-16 py-20 my-12 rounded-2xl shadow-lg">
       <div className="flex flex-col grow items-start justify-center gap-6 text-white">
         <h2 className="text-6xl font-extrabold leading-tight">
           Find Your Canadian City
