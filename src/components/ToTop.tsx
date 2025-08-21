@@ -1,34 +1,45 @@
 import { useEffect, useState } from "react";
 
-function ToTop() {
+export default function ToTop() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
+    const update = () => {
+      const shouldShow = window.scrollY > 50;
+      setShowButton((prev) => (prev !== shouldShow ? shouldShow : prev));
+      ticking = false;
+    };
+
     const onScroll = () => {
-      if (!showButton && window.scrollY > 50) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
       }
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
+    update();
+
     return () => window.removeEventListener("scroll", onScroll);
-  }, [showButton]);
+  }, []);
 
   const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  if (!showButton) return null;
+
   return (
-    showButton && (
-      <div className="fixed bottom-5 end-5 rounded-full p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out z-50">
-        <button onClick={handleScrollToTop}>Scroll to Top</button>;
-      </div>
-    )
+    <div className="fixed bottom-5 end-5 z-50">
+      <button
+        onClick={handleScrollToTop}
+        className="rounded-full bg-[#C62828] px-4 py-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-600"
+        aria-label="Scroll to top"
+      >
+        Scroll to Top
+      </button>
+    </div>
   );
 }
-
-export default ToTop;
