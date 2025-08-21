@@ -2,24 +2,31 @@ import { NavLink } from "react-router";
 
 function MainBanner() {
   return (
-    <div className="flex grow self-stretch bg-[#4B5563] px-8 my-12 py-12">
-      <div className="flex flex-col grow items-start justify-center gap-12 text-7xl  text-white">
-        <h2 className="">Find Your</h2>
-        <p>Canadian City</p>
-        <p>Based On Your MBTI</p>
+    <section className="flex grow self-stretch bg-gradient-to-r from-[#003366] to-[#1a1a1a] px-16 py-20 my-12 rounded-2xl shadow-lg">
+      <div className="flex flex-col grow items-start justify-center gap-6 text-white">
+        <h2 className="text-6xl font-extrabold leading-tight">
+          Find Your Canadian City
+        </h2>
+        <p className="text-2xl font-light tracking-wide">
+          Based on your MBTI personality type
+        </p>
       </div>
-      <div className="flex flex-col justify-center items-center gap-8 text-center text-3xl tracking-wider">
+
+      <div className="flex flex-col justify-center items-center gap-6 text-lg tracking-wide w-1/3 relative z-10">
         <a
-          className="font-light text-[#2f2f2f] bg-[#FDB813] w-full py-4 px-8 rounded-xl"
+          className="w-full text-center font-medium text-white border-2 border-white py-4 px-6 rounded-xl hover:bg-white hover:text-[#003366] transition-colors duration-200"
           href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
         >
           What is MBTI?
         </a>
-        <div className="bg-[#C62828] text-white font-bold w-full py-4 rounded-xl">
-          <NavLink to={"/test"}>Start Test</NavLink>
-        </div>
+        <NavLink
+          to="/test"
+          className="w-full text-center bg-[#C62828] text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:bg-[#a31d1d] transition-colors duration-200"
+        >
+          Start Test
+        </NavLink>
       </div>
-    </div>
+    </section>
   );
 }
 export default MainBanner;

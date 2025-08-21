@@ -2,16 +2,43 @@ import { NavLink } from "react-router";
 
 function Navbar() {
   return (
-    <nav className="mx-16">
-      <ul className="flex justify-between gap-8">
-        <li className="py-4 px-4 bg-white rounded-xl">
-          <NavLink to="/test">Take the test</NavLink>
+    <nav>
+      <ul className="flex gap-8 text-white font-semibold">
+        <li>
+          <NavLink
+            to="/test"
+            className={({ isActive }) =>
+              `transition-colors duration-200 hover:text-[#003366] ${
+                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              }`
+            }
+          >
+            Take the test
+          </NavLink>
         </li>
-        <li className="py-4 px-4 bg-white rounded-xl">
-          <NavLink to="/cities">Cities</NavLink>
+        <li>
+          <NavLink
+            to="/cities"
+            className={({ isActive }) =>
+              `transition-colors duration-200 hover:text-[#003366] ${
+                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              }`
+            }
+          >
+            Cities
+          </NavLink>
         </li>
-        <li className="py-4 px-4 bg-white rounded-xl">
-          <NavLink to="/about">About Us</NavLink>
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `transition-colors duration-200 hover:text-[#003366] ${
+                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              }`
+            }
+          >
+            About Us
+          </NavLink>
         </li>
       </ul>
     </nav>

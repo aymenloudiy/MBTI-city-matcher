@@ -1,5 +1,4 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { NavLink } from "react-router";
 
 function Footer() {
@@ -20,9 +19,8 @@ function Footer() {
             <li>
               <p className="mb-4">Follow Us</p>
               <ul className="flex flex-col gap-2">
-                <li>Facebook</li>
+                <li>Linked In</li>
                 <li>Instagram</li>
-                <li>X</li>
               </ul>
             </li>
             <li>
@@ -41,9 +39,6 @@ function Footer() {
           <ul className="flex gap-6">
             <li className="">
               <FaFacebook />
-            </li>
-            <li className="">
-              <FaXTwitter />
             </li>
             <li className="">
               <FaInstagram />
