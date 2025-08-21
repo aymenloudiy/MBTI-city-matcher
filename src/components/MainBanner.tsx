@@ -15,7 +15,7 @@ function MainBanner() {
       <div className="flex flex-col justify-center items-center gap-6 text-lg tracking-wide w-1/3 relative z-10">
         <a
           className="w-full text-center font-medium text-white border-2 border-white py-4 px-6 rounded-xl hover:bg-white hover:text-[#003366] transition-colors duration-200"
-          href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
+          href="https://www.16personalities.com/free-personality-test"
         >
           What is MBTI?
         </a>

@@ -27,3 +27,5 @@ export default function CitiesPage() {
     </main>
   );
 }
+
+//I want to make them looking like in the frame
