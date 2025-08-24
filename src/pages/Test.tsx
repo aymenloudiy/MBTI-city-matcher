@@ -1,12 +1,13 @@
 import { useCallback, useMemo, useState } from "react";
 import QuestionBlock from "@/components/QuestionBlock";
-import CityModal from "@/components/CityModal";
+import ResultCard from "@/components/ResultCard";
 import { questions as questionPages } from "@/data/questions";
 import { cities } from "@/data/cities";
 import { evaluateQuiz } from "@/lib/mbti";
 
 import type { question } from "@/types/question";
 import type { City } from "@/types/city";
+import type { MbtiProfile } from "@/lib/mbti";
 
 type AnswerMap = Record<string, "1" | "2">;
 
@@ -15,95 +16,87 @@ export default function QuizTestPage() {
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [mbti, setMbti] = useState<string | null>(null);
   const [city, setCity] = useState<City | null>(null);
-  const [showCity, setShowCity] = useState(false);
+  const [profile, setProfile] = useState<MbtiProfile | null>(null);
 
   const isLastPage = page === questionPages.length - 1;
   const currentBlock: question[] = useMemo(() => questionPages[page], [page]);
+
+  const handlePrev = useCallback(() => setPage((p) => Math.max(0, p - 1)), []);
+
+  const handleBlockSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const fd = new FormData(e.currentTarget);
+      const block: AnswerMap = {};
+      for (const [id, value] of fd.entries())
+        block[id] = String(value) as "1" | "2";
+      const merged = { ...answers, ...block };
+
+      if (!isLastPage) {
+        setAnswers(merged);
+        setPage((p) => p + 1);
+        return;
+      }
+
+      const { mbti: m, city: c, profile: prof } = evaluateQuiz(merged, cities);
+      setAnswers(merged);
+      setMbti(m);
+      setCity(c ?? null);
+      setProfile(prof ?? null);
+    },
+    [answers, isLastPage]
+  );
 
   const resetAll = () => {
     setPage(0);
     setAnswers({});
     setMbti(null);
     setCity(null);
-    setShowCity(false);
+    setProfile(null);
   };
 
-  const handleBlockSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const shareResult = async () => {
+    const title = "My MBTI City Match";
+    const text =
+      mbti && city
+        ? `I got ${mbti} - matched with ${city.name}!`
+        : "Check out my MBTI city match!";
 
-      const fd = new FormData(e.currentTarget);
-      const blockAnswers: AnswerMap = {};
-      for (const [id, value] of fd.entries()) {
-        if (value) blockAnswers[id] = String(value) as "1" | "2";
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, text });
+      } else {
+        await navigator.clipboard.writeText(`${text}`);
+        alert("Result copied to clipboard!");
       }
-
-      const mergedAnswers: AnswerMap = { ...answers, ...blockAnswers };
-
-      if (!isLastPage) {
-        setAnswers(mergedAnswers);
-        setPage((p) => p + 1);
-        return;
-      }
-
-      const { mbti: resultMbti, city: pickedCity } = evaluateQuiz(
-        mergedAnswers,
-        cities
-      );
-      setAnswers(mergedAnswers);
-      setMbti(resultMbti);
-      setCity(pickedCity ?? null);
-      setShowCity(!!pickedCity);
-    },
-    [answers, isLastPage]
-  );
+    } catch (err) {
+      console.log("Share dismissed", err);
+    }
+  };
 
   return (
-    <div className="mx-auto max-w-2xl p-4 space-y-4">
-      {!mbti ? (
+    <div className="mx-auto max-w-3xl p-6">
+      {!mbti || !city || !profile ? (
         <>
           <QuestionBlock
             questions={currentBlock}
             isLastPage={isLastPage}
             onSubmitBlock={handleBlockSubmit}
+            onPrev={handlePrev}
+            showPrev={page > 0}
+            pageLabel={`page ${page + 1} of ${questionPages.length}`}
             answers={answers}
           />
-          <div className="text-sm text-gray-500">
-            Page {page + 1} of {questionPages.length}
-          </div>
         </>
       ) : (
-        <div className="rounded-xl border p-5 space-y-3">
-          <h1 className="text-2xl font-semibold">Your MBTI: {mbti}</h1>
-          {city && (
-            <p className="text-gray-700">
-              Suggested city: <span className="font-medium">{city.name}</span>
-            </p>
-          )}
-          <div className="flex gap-2 pt-2">
-            {city && (
-              <button
-                type="button"
-                className="rounded bg-black px-4 py-2 text-white"
-                onClick={() => setShowCity(true)}
-              >
-                Why this city?
-              </button>
-            )}
-            <button
-              type="button"
-              className="rounded border px-4 py-2"
-              onClick={resetAll}
-            >
-              Retake
-            </button>
-          </div>
-        </div>
+        <ResultCard
+          mbti={mbti}
+          city={city}
+          profile={profile}
+          onRetake={resetAll}
+          onShare={shareResult}
+        />
       )}
-      <CityModal
-        city={showCity ? city : null}
-        onClose={() => setShowCity(false)}
-      />
     </div>
   );
 }
