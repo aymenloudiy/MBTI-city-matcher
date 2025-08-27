@@ -8,10 +8,14 @@ export default function CitiesPage() {
   const [selected, setSelected] = useState<City | null>(null);
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-10">
+    <main className="mx-auto px-16 py-8">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Cities</h1>
-        <p className="mt-2 text-gray-600">Click a city to learn more.</p>
+        <h1 className="text-4xl font-bold text-center tracking-tight">
+          Cities
+        </h1>
+        <p className="mt-2 text-center text-gray-600">
+          Click a city to learn more.
+        </p>
       </header>
 
       <section
@@ -27,3 +31,5 @@ export default function CitiesPage() {
     </main>
   );
 }
+
+//I want to make them looking like in the frame

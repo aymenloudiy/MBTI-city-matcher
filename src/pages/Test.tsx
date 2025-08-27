@@ -75,28 +75,30 @@ export default function QuizTestPage() {
   };
 
   return (
-    <div className="mx-auto max-w-3xl p-6">
-      {!mbti || !city || !profile ? (
-        <>
-          <QuestionBlock
-            questions={currentBlock}
-            isLastPage={isLastPage}
-            onSubmitBlock={handleBlockSubmit}
-            onPrev={handlePrev}
-            showPrev={page > 0}
-            pageLabel={`page ${page + 1} of ${questionPages.length}`}
-            answers={answers}
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white flex items-start justify-center py-10 px-4">
+      <div className="mx-auto max-w-3xl p-6">
+        {!mbti || !city || !profile ? (
+          <>
+            <QuestionBlock
+              questions={currentBlock}
+              isLastPage={isLastPage}
+              onSubmitBlock={handleBlockSubmit}
+              onPrev={handlePrev}
+              showPrev={page > 0}
+              pageLabel={`page ${page + 1} of ${questionPages.length}`}
+              answers={answers}
+            />
+          </>
+        ) : (
+          <ResultCard
+            mbti={mbti}
+            city={city}
+            profile={profile}
+            onRetake={resetAll}
+            onShare={shareResult}
           />
-        </>
-      ) : (
-        <ResultCard
-          mbti={mbti}
-          city={city}
-          profile={profile}
-          onRetake={resetAll}
-          onShare={shareResult}
-        />
-      )}
+        )}
+      </div>
     </div>
   );
 }
