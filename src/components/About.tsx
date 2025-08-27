@@ -13,13 +13,14 @@ const team: TeamMember[] = [
     role: "Project Lead & UX/UI Designer",
     photo: "/images/caroline.jpg",
     message:
-      "This project started with my idea, but everything came to life thanks to Amen – big shout-out to my teammate! Watching each feature come alive was so exciting. Managing a project isn’t easy, but seeing imagination turn into reality was incredibly fun. Designing every element to create a user-friendly experience was the best part.",
+      "This project started with my idea, but everything came to life thanks to Aymen – big shout-out to my teammate! Watching each feature come alive was so exciting. Managing a project isn’t easy, but seeing imagination turn into reality was incredibly fun. Designing every element to create a user-friendly experience was the best part.",
   },
   {
-    name: "Aymen [Super Genius]",
-    role: "Developer",
+    name: "Aymen Loudiy",
+    role: "Full-stack developer",
     photo: "/images/aymen.jpg",
-    message: "add any words you want!!",
+    message:
+      "This project began with an idea from my teammate, and I had the responsibility of bringing it to life through development — ensuring that our vision translated into functional, scalable solutions. Each stage was both challenging and rewarding as we turned concepts into reality. The project’s visual strength is due to the work of our designer, whose attention to detail and refined sense of aesthetics gave the final result its clarity, balance, and elegance.",
   },
 ];
 

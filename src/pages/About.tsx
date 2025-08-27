@@ -10,7 +10,7 @@ function About() {
         <p className="text-center text-gray-700 mb-12">
           This project started with Caroline’s idea and design vision. As the
           project lead, she planned the structure and timeline and designed the
-          entire UX/UI using Figma. Aimen brought the concept to life by
+          entire UX/UI using Figma. Aymen brought the concept to life by
           developing and implementing all features. Together, we combined design
           and development to create a seamless experience.
         </p>
