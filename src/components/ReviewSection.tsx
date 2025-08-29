@@ -141,8 +141,8 @@ export default function ReviewSection() {
   }, [loading, error, reviews]);
 
   return (
-    <section className="mx-auto w-full max-w-3xl space-y-8 py-8 px-4 md:px-0">
-      <h2 className="text-2xl md:text-3xl font-[geo] font-bold text-[#C62828] text-center">
+    <section className="w-full space-y-8 py-8">
+      <h2 className="text-2xl md:text-4xl font-[geo] font-bold text-[#C62828] text-center">
         Recent Reviews
       </h2>
 
