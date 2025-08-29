@@ -8,7 +8,7 @@ export default function CitiesPage() {
   const [selected, setSelected] = useState<City | null>(null);
 
   return (
-    <main className="mx-auto px-16 py-8">
+    <main className="mx-auto px-16 py-8  bg-gray-100 ">
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-center text-[#C62828] tracking-tight">
           Find your City
