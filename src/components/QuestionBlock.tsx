@@ -32,7 +32,7 @@ export default function QuestionBlock({
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-8"
+      className="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-8 space-y-8"
     >
       <div className="space-y-6">
         {questions.map((q) => (
@@ -40,28 +40,32 @@ export default function QuestionBlock({
             <label className="mb-3 block text-xl font-bold font-[geo] text-[#C62828]">
               {q.question}
             </label>
-            <div className="flex gap-4">
+
+            {/* 버튼 반응형 영역 */}
+            <div className="flex flex-col md:flex-row gap-4 items-stretch">
               <button
                 type="button"
                 onClick={() => handleSelect(q.id, "1")}
-                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition 
+                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition flex justify-center items-center 
                   ${
                     localAnswers[q.id] === "1"
                       ? "bg-[#C62828] text-white border-[#C62828]"
                       : "border-gray-300 text-gray-700 hover:bg-gray-50"
                   }`}
+                style={{ minHeight: "5rem" }}
               >
                 {q.optionA}
               </button>
               <button
                 type="button"
                 onClick={() => handleSelect(q.id, "2")}
-                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition 
+                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition flex justify-center items-center 
                   ${
                     localAnswers[q.id] === "2"
                       ? "bg-[#C62828] text-white border-[#C62828]"
                       : "border-gray-300 text-gray-700 hover:bg-gray-50"
                   }`}
+                style={{ minHeight: "5rem" }}
               >
                 {q.optionB}
               </button>
@@ -70,8 +74,9 @@ export default function QuestionBlock({
         ))}
       </div>
 
-      <div className="mt-8 flex items-center justify-between">
-        <div className="w-[110px]">
+      {/* 하단 컨트롤 */}
+      <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="w-full md:w-[110px]">
           {showPrev && onPrev ? (
             <button
               type="button"
@@ -85,14 +90,14 @@ export default function QuestionBlock({
           )}
         </div>
 
-        <div className="text-sm text-gray-500 font-[Space Mono]">
+        <div className="text-sm text-gray-500 font-[Space Mono] text-center flex-1">
           {pageLabel}
         </div>
 
-        <div className="w-[110px] flex justify-end">
+        <div className="w-full md:w-[110px] flex justify-end">
           <button
             type="submit"
-            className="w-full rounded-xl bg-[#C62828] text-white px-4 py-2 shadow hover:bg-[#a31d1d] transition"
+            className="w-full md:w-auto rounded-xl bg-[#C62828] text-white px-4 py-2 shadow hover:bg-[#a31d1d] transition"
             disabled={Object.values(localAnswers).some((val) => !val)}
           >
             {isLastPage ? "Submit" : "Next"}

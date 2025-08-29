@@ -11,7 +11,7 @@ export default function CitiesPage() {
     <main className="mx-auto px-16 py-8">
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-center tracking-tight">
-          Cities
+          Find your City
         </h1>
         <p className="mt-2 text-center text-gray-600">
           Click a city to learn more.
