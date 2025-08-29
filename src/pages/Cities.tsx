@@ -14,7 +14,8 @@ export default function CitiesPage() {
           Find your City
         </h1>
         <p className="mt-2 text-center text-gray-600">
-          Click a city to learn more.
+          We have selected 16 iconic Canadian cities to help you discover which
+          city best matches your MBTI.
         </p>
       </header>
 
