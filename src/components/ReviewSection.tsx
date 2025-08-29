@@ -149,7 +149,7 @@ export default function ReviewSection() {
       <div className="rounded-2xl bg-gray-50 p-4 shadow-md">{content}</div>
 
       <div className="rounded-2xl bg-gray-50 p-6 shadow-md">
-        <h3 className="mb-4 text-lg font-semibold text-[#C62828]">
+        <h3 className="mb-4 text-lg font-semibold text-[#C62828] text-center">
           Leave a review
         </h3>
         <form onSubmit={onSubmit} className="space-y-4">
@@ -218,7 +218,7 @@ export default function ReviewSection() {
 
           {error && <p className="text-sm text-red-500">{error}</p>}
 
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <button
               type="submit"
               disabled={submitting}

@@ -75,20 +75,35 @@ export default function QuizTestPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white flex items-start justify-center py-10 px-4">
-      <div className="mx-auto max-w-3xl p-6">
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white py-10 px-4">
+      <div className="mx-auto max-w-3xl">
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-center text-[#C62828] tracking-tight">
+            Take a quick test to find your matching city
+          </h1>
+          <p className="mt-2 bold text-center text-gray-600">
+            We’ll guess your MBTI based on the choices you’d make in different
+            situations, then suggest the city that fits you best. There are 16
+            questions, each with two options—just pick whichever feels more like
+            you. Ready to find your city?
+          </p>
+          <p className="mt-2 text-xs text-[#c62828] text-center">
+            This test only gives a guess of your MBTI, so don’t take it too
+            seriously—just have fun! If you want a proper MBTI test, try the
+            “What is MBTI” button on our homepage.
+          </p>
+        </header>
+
         {!mbti || !city || !profile ? (
-          <>
-            <QuestionBlock
-              questions={currentBlock}
-              isLastPage={isLastPage}
-              onSubmitBlock={handleBlockSubmit}
-              onPrev={handlePrev}
-              showPrev={page > 0}
-              pageLabel={`page ${page + 1} of ${questionPages.length}`}
-              answers={answers}
-            />
-          </>
+          <QuestionBlock
+            questions={currentBlock}
+            isLastPage={isLastPage}
+            onSubmitBlock={handleBlockSubmit}
+            onPrev={handlePrev}
+            showPrev={page > 0}
+            pageLabel={`page ${page + 1} of ${questionPages.length}`}
+            answers={answers}
+          />
         ) : (
           <ResultCard
             mbti={mbti}
