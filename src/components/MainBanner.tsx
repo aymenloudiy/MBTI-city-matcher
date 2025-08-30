@@ -3,7 +3,6 @@ import { NavLink } from "react-router";
 function MainBanner() {
   return (
     <section className="flex flex-col md:flex-row w-full bg-[#2b0d0d] px-6 md:px-16 mt-6 md:mt-12 py-12 rounded-2xl shadow-lg">
-      {/* 왼쪽 텍스트 컬럼 */}
       <div className="flex flex-col justify-center md:w-2/3 gap-2 md:gap-4 text-white text-center md:text-left">
         <h2 className="text-4xl md:text-6xl font-extrabold leading-snug md:leading-tight font-[geo] text-center">
           <span className="block">Where’s your</span>

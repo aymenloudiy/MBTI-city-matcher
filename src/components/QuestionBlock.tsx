@@ -41,7 +41,6 @@ export default function QuestionBlock({
               {q.question}
             </label>
 
-            {/* 버튼 반응형 영역 */}
             <div className="flex flex-col md:flex-row gap-4 items-stretch">
               <button
                 type="button"
@@ -74,7 +73,6 @@ export default function QuestionBlock({
         ))}
       </div>
 
-      {/* 하단 컨트롤 */}
       <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="w-full md:w-[110px]">
           {showPrev && onPrev ? (

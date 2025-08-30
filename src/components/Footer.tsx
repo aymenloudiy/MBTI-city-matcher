@@ -5,15 +5,15 @@ function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#C62828] to-[#2b0d0d] text-white py-10 px-6 md:px-16">
       <div className="flex flex-col md:flex-row justify-between gap-8 items-center md:items-start">
-        <img
-          src="../../public/images/logo.png" // 여기에 로고 파일 경로
-          alt="Maple Match Logo"
-          className="h-10 md:h-48 mx-auto md:mx-0" // 높이 조절, 가운데/왼쪽 정렬
-        />
+        <NavLink to="/">
+          <img
+            src="../../public/images/logo.png"
+            alt="Maple Match Logo"
+            className="h-10 md:h-48 mx-auto md:mx-0"
+          />
+        </NavLink>
 
-        {/* Links and Socials */}
         <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left">
-          {/* Resources */}
           <div>
             <p className="mb-4 font-semibold text-lg md:text-xl">Resources</p>
             <ul className="flex flex-col gap-2">
@@ -23,7 +23,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Follow Us */}
           <div>
             <p className="mb-4 font-semibold text-lg md:text-xl">Follow Us</p>
             <ul className="flex gap-6 justify-center md:justify-start">

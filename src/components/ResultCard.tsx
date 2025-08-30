@@ -36,7 +36,6 @@ export default function ResultCard({
         </p>
       </motion.div>
 
-      {/* 이미지 */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +49,6 @@ export default function ResultCard({
         />
       </motion.div>
 
-      {/* 설명 */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -63,7 +61,6 @@ export default function ResultCard({
         <p className="text-gray-700 leading-relaxed">{city.description}</p>
       </motion.div>
 
-      {/* 프로필 */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -83,7 +80,6 @@ export default function ResultCard({
         </div>
       </motion.div>
 
-      {/* 버튼 */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
