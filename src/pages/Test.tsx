@@ -55,25 +55,6 @@ export default function QuizTestPage() {
     setProfile(null);
   };
 
-  const shareResult = async () => {
-    const title = "My MBTI City Match";
-    const text =
-      mbti && city
-        ? `I got ${mbti} - matched with ${city.name}!`
-        : "Check out my MBTI city match!";
-
-    try {
-      if (navigator.share) {
-        await navigator.share({ title, text });
-      } else {
-        await navigator.clipboard.writeText(`${text}`);
-        alert("Result copied to clipboard!");
-      }
-    } catch (err) {
-      console.log("Share dismissed", err);
-    }
-  };
-
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white py-10 px-4">
       <div className="mx-auto max-w-3xl">
@@ -110,7 +91,6 @@ export default function QuizTestPage() {
             city={city}
             profile={profile}
             onRetake={resetAll}
-            onShare={shareResult}
           />
         )}
       </div>

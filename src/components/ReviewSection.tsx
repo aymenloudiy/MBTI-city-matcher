@@ -149,7 +149,7 @@ export default function ReviewSection() {
       <div className="rounded-2xl bg-gray-50 p-4 shadow-md">{content}</div>
 
       <div className="rounded-2xl bg-gray-50 p-6 shadow-md">
-        <h3 className="mb-4 text-lg font-semibold text-[#C62828] text-center">
+        <h3 className="mb-4 text-lg font-semibold font-[geo] text-[#C62828] text-center">
           Leave a review
         </h3>
         <form onSubmit={onSubmit} className="space-y-4">
@@ -164,7 +164,7 @@ export default function ReviewSection() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 font-mono"
             >
               Name
             </label>
@@ -174,14 +174,14 @@ export default function ReviewSection() {
               required
               maxLength={80}
               placeholder="Your name"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828]"
+              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-mono"
             />
           </div>
 
           <div>
             <label
               htmlFor="rating"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 font-mono"
             >
               Rating (1–5)
             </label>
@@ -194,14 +194,14 @@ export default function ReviewSection() {
               required
               placeholder="5"
               inputMode="numeric"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828]"
+              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-mono"
             />
           </div>
 
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 font-mono"
             >
               Message
             </label>
@@ -212,7 +212,7 @@ export default function ReviewSection() {
               maxLength={800}
               rows={4}
               placeholder="What did you think?"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828]"
+              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-mono"
             />
           </div>
 
@@ -222,7 +222,7 @@ export default function ReviewSection() {
             <button
               type="submit"
               disabled={submitting}
-              className="rounded-lg bg-[#C62828] hover:bg-[#a31d1d] px-4 py-2 text-white font-semibold disabled:opacity-50 transition-colors duration-200"
+              className="rounded-lg bg-[#C62828] hover:bg-[#a31d1d] px-4 py-2 text-white font-semibold disabled:opacity-50 transition-colors duration-200 font-mono"
             >
               {submitting ? "Submitting…" : "Post Review"}
             </button>

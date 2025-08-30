@@ -37,15 +37,17 @@ export default function QuestionBlock({
       <div className="space-y-6">
         {questions.map((q) => (
           <div key={q.id} className="w-full space-y-4">
+            {/* 질문 - geo 폰트 */}
             <label className="mb-3 block text-xl font-bold font-[geo] text-[#C62828]">
               {q.question}
             </label>
 
+            {/* 답변 - mono 폰트 */}
             <div className="flex flex-col md:flex-row gap-4 items-stretch">
               <button
                 type="button"
                 onClick={() => handleSelect(q.id, "1")}
-                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition flex justify-center items-center 
+                className={`flex-1 rounded-xl border-2 px-4 py-3 text-base md:text-lg font-mono font-medium transition flex justify-center items-center text-center break-words 
                   ${
                     localAnswers[q.id] === "1"
                       ? "bg-[#C62828] text-white border-[#C62828]"
@@ -58,7 +60,7 @@ export default function QuestionBlock({
               <button
                 type="button"
                 onClick={() => handleSelect(q.id, "2")}
-                className={`flex-1 rounded-xl border-2 p-4 text-lg font-medium transition flex justify-center items-center 
+                className={`flex-1 rounded-xl border-2 px-4 py-3 text-base md:text-lg font-mono font-medium transition flex justify-center items-center text-center break-words 
                   ${
                     localAnswers[q.id] === "2"
                       ? "bg-[#C62828] text-white border-[#C62828]"
@@ -73,7 +75,7 @@ export default function QuestionBlock({
         ))}
       </div>
 
-      <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4 font-mono">
         <div className="w-full md:w-[110px]">
           {showPrev && onPrev ? (
             <button
@@ -88,14 +90,14 @@ export default function QuestionBlock({
           )}
         </div>
 
-        <div className="text-sm text-gray-500 font-[Space Mono] text-center flex-1">
+        <div className="text-sm text-gray-500 font-mono text-center flex-1">
           {pageLabel}
         </div>
 
         <div className="w-full md:w-[110px] flex justify-end">
           <button
             type="submit"
-            className="w-full md:w-auto rounded-xl bg-[#C62828] text-white px-4 py-2 shadow hover:bg-[#a31d1d] transition"
+            className="w-full md:w-auto rounded-xl bg-[#C62828] text-white px-4 py-2 shadow hover:bg-[#a31d1d] transition font-mono"
             disabled={Object.values(localAnswers).some((val) => !val)}
           >
             {isLastPage ? "Submit" : "Next"}
