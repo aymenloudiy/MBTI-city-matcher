@@ -7,7 +7,7 @@ function About() {
         <h1 className="text-4xl font-[geo] font-extrabold text-[#C62828] mb-8 text-center">
           About Us
         </h1>
-        <p className="text-center text-gray-700 mb-12">
+        <p className="text-center text-gray-700 mb-12 font-[geo]">
           This project started with Caroline’s idea and design vision. When she
           first came to Canada to study, one of her biggest questions was:
           “Which city would be the best fit for me?” Adapting to a new country

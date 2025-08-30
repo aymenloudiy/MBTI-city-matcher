@@ -5,10 +5,11 @@ function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#C62828] to-[#2b0d0d] text-white py-10 px-6 md:px-16">
       <div className="flex flex-col md:flex-row justify-between gap-8 items-center md:items-start">
-        {/* Maple Match Title */}
-        <div className="mb-6 md:mb-0 text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold">MAPLE MATCH</h2>
-        </div>
+        <img
+          src="../../public/images/logo.png" // 여기에 로고 파일 경로
+          alt="Maple Match Logo"
+          className="h-10 md:h-48 mx-auto md:mx-0" // 높이 조절, 가운데/왼쪽 정렬
+        />
 
         {/* Links and Socials */}
         <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left">
@@ -55,7 +56,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="mt-8 text-center text-sm">
         &copy; 2025 MAPLE MATCH &trade;. All Rights Reserved.
       </div>
