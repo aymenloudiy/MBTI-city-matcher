@@ -7,7 +7,7 @@ function Footer() {
       <div className="flex flex-col md:flex-row justify-between gap-8 items-center md:items-start">
         <NavLink to="/">
           <img
-            src="../../public/images/logo.png"
+            src="images/logo.png"
             alt="Maple Match Logo"
             className="h-10 md:h-48 mx-auto md:mx-0"
           />
