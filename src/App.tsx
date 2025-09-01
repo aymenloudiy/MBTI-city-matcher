@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ToTop from "./components/ToTop";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </div>
       {/* !TODO: Make sure this works */}
       <ToTop />
+      <Toaster position="bottom-center" toastOptions={{ duration: 2000 }} />
 
       <Footer />
     </div>

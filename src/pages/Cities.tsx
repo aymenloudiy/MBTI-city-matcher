@@ -8,13 +8,14 @@ export default function CitiesPage() {
   const [selected, setSelected] = useState<City | null>(null);
 
   return (
-    <main className="mx-auto px-16 py-8">
+    <main className="mx-auto px-16 py-8  bg-gray-100 ">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold text-center tracking-tight">
-          Cities
+        <h1 className="text-4xl font-bold text-center text-[#C62828] tracking-tight">
+          Find your City
         </h1>
         <p className="mt-2 text-center text-gray-600">
-          Click a city to learn more.
+          We have selected 16 iconic Canadian cities to help you discover which
+          city best matches your MBTI.
         </p>
       </header>
 
@@ -31,5 +32,3 @@ export default function CitiesPage() {
     </main>
   );
 }
-
-//I want to make them looking like in the frame
