@@ -33,6 +33,11 @@ export default function QuizTestPage() {
       const merged = { ...answers, ...block };
 
       if (!isLastPage) {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
         setAnswers(merged);
         setPage((p) => p + 1);
         return;
