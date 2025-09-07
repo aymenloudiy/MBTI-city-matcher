@@ -13,7 +13,7 @@ function Footer() {
           />
         </NavLink>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left font-mono">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left font-[bangers] tracking-wide">
           <div>
             <p className="mb-4 font-semibold text-lg md:text-xl">Resources</p>
             <ul className="flex flex-col gap-2">
@@ -55,7 +55,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mt-8 text-center text-sm font-mono">
+      <div className="mt-8 text-center text-sm font-[geologica]">
         &copy; 2025 MAPLE MATCH &trade;. All Rights Reserved.
       </div>
     </footer>

@@ -64,7 +64,7 @@ export default function QuizTestPage() {
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white py-10 px-4">
       <div className="mx-auto max-w-3xl">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-center text-[#C62828] tracking-tight">
+          <h1 className="text-4xl font-bold text-center text-[#C62828] font-[bangers] tracking-wider">
             Take a quick test to find your matching city
           </h1>
           <p className="mt-2 bold text-center text-gray-600">

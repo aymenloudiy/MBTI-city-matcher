@@ -35,7 +35,7 @@ export default function ToTop() {
     <div className="fixed bottom-5 end-5 z-50">
       <button
         onClick={handleScrollToTop}
-        className="rounded-full bg-[#C62828] px-4 py-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-600"
+        className="rounded-full bg-[#FFEB3B] px-4 py-3 text-xs font-medium font-[bangers] tracking-widest uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-600"
         aria-label="Scroll to top"
       >
         To Top

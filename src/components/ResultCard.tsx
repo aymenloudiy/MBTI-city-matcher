@@ -37,10 +37,10 @@ export default function ResultCard({
       className="mx-auto max-w-2xl rounded-3xl bg-white shadow-xl ring-1 ring-black/10 overflow-hidden"
     >
       <div className="bg-[#2b0d0d] p-6 text-center text-white space-y-2">
-        <h2 className="text-3xl font-extrabold font-[geo]">
+        <h2 className="text-3xl font-extrabold font-[geologica]">
           Your Maple City is {city.name}!
         </h2>
-        <p className="text-xl font-semibold tracking-wide font-mono">
+        <p className="text-xl font-semibold tracking-wide font-[nunito]">
           {mbti} – <span className="font-extrabold">{roleFromMbti(mbti)}</span>
         </p>
       </div>

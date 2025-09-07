@@ -4,10 +4,10 @@ function About() {
   return (
     <div className="min-h-screen w-full bg-gray-100 flex flex-col items-center py-12 px-4">
       <div className="max-w-5xl w-full px-6">
-        <h1 className="text-4xl font-[geo] font-extrabold text-[#C62828] mb-8 text-center">
+        <h1 className="text-4xl font-[bangers] tracking-wider font-extrabold text-[#C62828] mb-8 text-center">
           About Us
         </h1>
-        <p className="text-center text-gray-700 mb-12 font-[geo]">
+        <p className="text-center text-gray-700 mb-12 font-[geologica]">
           This project started with Caroline’s idea and design vision. When she
           first came to Canada to study, one of her biggest questions was:
           “Which city would be the best fit for me?” Adapting to a new country
