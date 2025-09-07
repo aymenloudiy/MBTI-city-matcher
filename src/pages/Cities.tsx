@@ -10,7 +10,7 @@ export default function CitiesPage() {
   return (
     <main className="mx-auto px-16 py-8  bg-gray-100 ">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold text-center text-[#C62828] tracking-tight">
+        <h1 className="text-4xl font-bold text-center text-[#C62828] font-[bangers] tracking-wider">
           Find your City
         </h1>
         <p className="mt-2 text-center text-gray-600">
