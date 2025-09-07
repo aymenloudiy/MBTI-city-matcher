@@ -7,7 +7,7 @@ function Header() {
       <div className="w-full md:w-auto flex justify-center md:justify-start mb-4 md:mb-0">
         <NavLink to="/">
           <h1
-            className="font-[bangers] font-bold text-3xl md:text-5xl text-[#FFEB3B] 
+            className="font-[bangers] font-bold text-4xl md:text-5xl text-[#FFEB3B] 
 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)] text-center md:text-left tracking-wider"
           >
             Maple Match
