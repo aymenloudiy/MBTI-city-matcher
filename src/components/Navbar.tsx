@@ -8,8 +8,8 @@ function Navbar() {
           <NavLink
             to="/test"
             className={({ isActive }) =>
-              `transition-colors duration-200 hover:text-[#FFD700] ${
-                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              `transition-colors duration-200 hover:text-[#FFEB3B] ${
+                isActive ? "text-[#FFEB3B] border-b-4 border-[#FFEB3B]" : ""
               }`
             }
           >
@@ -20,8 +20,8 @@ function Navbar() {
           <NavLink
             to="/cities"
             className={({ isActive }) =>
-              `transition-colors duration-200 hover:text-[#FFD700] ${
-                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              `transition-colors duration-200 hover:text-[#FFEB3B] ${
+                isActive ? "text-[#FFEB3B] border-b-4 border-[#FFEB3B]" : ""
               }`
             }
           >
@@ -32,8 +32,8 @@ function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `transition-colors duration-200 hover:text-[#FFD700] ${
-                isActive ? "text-[#FFD700] border-b-4 border-[#FFD700]" : ""
+              `transition-colors duration-200 hover:text-[#FFEB3B] ${
+                isActive ? "text-[#FFEB3B] border-b-4 border-[#FFEB3B]" : ""
               }`
             }
           >

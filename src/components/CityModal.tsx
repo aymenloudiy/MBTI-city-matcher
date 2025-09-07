@@ -61,7 +61,7 @@ export default function CityModal({ city, onClose }: CityModalProps) {
           <div>
             <h3
               id="city-modal-title"
-              className="text-2xl md:text-3xl font-bold font-[geo] text-[#C62828] mb-2 pr-12"
+              className="text-2xl md:text-3xl font-bold font-[geologica] text-[#C62828] mb-2 pr-12"
             >
               {city.title || city.name}
             </h3>

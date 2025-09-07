@@ -22,13 +22,13 @@ export default function CityBlock({ city, onSelect }: CityBlockProps) {
       <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/40 md:group-hover:bg-black/40" />
 
       <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-        <span className="font-[geo] text-white text-2xl md:text-3xl lg:text-4xl font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transform md:group-hover:scale-110 transition-all duration-300">
+        <span className="font-[geologica] text-white text-2xl md:text-3xl lg:text-4xl font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transform md:group-hover:scale-110 transition-all duration-300">
           {city.name}
         </span>
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center px-4 text-center md:hidden">
-        <span className="font-[geo] text-white text-2xl font-bold">
+        <span className="font-[geologica] text-white text-2xl font-bold">
           {city.name}
         </span>
       </div>
