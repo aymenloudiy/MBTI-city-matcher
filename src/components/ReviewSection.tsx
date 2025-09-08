@@ -236,7 +236,7 @@ export default function ReviewSection() {
 function ReviewCard({ review }: { review: Review }) {
   const dt = new Date(review.created_at);
   return (
-    <article className="h-full rounded-2xl border border-gray-300 p-4 shadow-sm bg-white">
+    <article className="h-full rounded-2xl border border-gray-300 p-4 shadow-sm bg-white ml-[12px]">
       <div className="flex items-baseline justify-between mb-2">
         <h4 className="font-semibold text-[#C62828]">{review.name}</h4>
         <div className="text-xs text-gray-500">{dt.toLocaleDateString()}</div>
