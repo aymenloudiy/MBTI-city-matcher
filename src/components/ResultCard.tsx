@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import type { City } from "@/types/city";
 import type { MbtiProfile } from "@/lib/mbti";
+import mbtiResults from "@/mbtiResults.json";
+
+type MbtiKey = keyof typeof mbtiResults;
+function isMbtiKey(x: string): x is MbtiKey {
+  return x in mbtiResults;
+}
 
 interface ResultCardProps {
   mbti: string;
@@ -29,6 +35,8 @@ export default function ResultCard({
       .catch(() => toast.error("Failed to copy result"));
   };
 
+  const entry = isMbtiKey(mbti) ? mbtiResults[mbti] : undefined;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -49,7 +57,7 @@ export default function ResultCard({
         <img
           src={city.image}
           alt={city.title || city.name}
-          className="w-full rounded-2xl shadow-md object-cover h-64 object-cover"
+          className="w-full rounded-2xl shadow-md h-64 object-cover"
         />
       </div>
 
@@ -62,6 +70,15 @@ export default function ResultCard({
 
       <div className="mt-5 px-6 space-y-3">
         <p className="text-gray-900 font-medium">{profile.blurb}</p>
+      </div>
+
+      <div className="mt-5 px-6 space-y-3">
+        <p className="text-gray-900 font-medium">
+          Travel Recommendation: {entry?.["Travel Recommendation"] ?? "—"}
+        </p>
+        <p className="text-gray-900 font-medium">
+          Less Compatible City: {entry?.["Less Compatible"] ?? "—"}
+        </p>
       </div>
 
       <div className="mt-8 grid grid-cols-2 gap-4 px-6 pb-6">
