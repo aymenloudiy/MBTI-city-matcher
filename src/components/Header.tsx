@@ -3,12 +3,12 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <header className="flex flex-col md:flex-row items-center justify-center md:justify-between py-6 px-6 md:px-16 bg-gradient-to-r from-[#C62828] to-[#2b0d0d] uppercase">
-      <div className="w-full md:w-auto flex justify-center md:justify-start mb-4 md:mb-0">
+    <header className="flex flex-col md:flex-row items-center justify-between py-4 md:py-6 px-4 md:px-16 bg-gradient-to-r from-[#C62828] to-[#2b0d0d] uppercase">
+      <div className="w-full md:w-auto flex justify-center md:justify-start mb-3 md:mb-0">
         <NavLink to="/">
           <h1
-            className="font-[bangers] font-bold text-3xl md:text-5xl text-[#FFEB3B] 
-text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)] text-center md:text-left tracking-wider"
+            className="font-[bangers] font-bold text-3xl sm:text-4xl md:text-5xl text-[#FFEB3B] 
+            text-center md:text-left tracking-wider"
           >
             Maple Match
           </h1>

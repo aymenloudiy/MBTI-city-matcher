@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-[#C62828] to-[#2b0d0d] text-white py-10 px-6 md:px-16">
+    <footer className="bg-gradient-to-r from-[#C62828] to-[#2b0d0d] text-white py-8 px-6 md:px-16">
       <div className="flex flex-col md:flex-row justify-between gap-8 items-center md:items-start">
         <NavLink to="/">
           <img
@@ -13,10 +13,10 @@ function Footer() {
           />
         </NavLink>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left font-[bangers] tracking-wide">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-20 w-full md:w-auto items-center md:items-start text-center md:text-left font-[bangers] tracking-wide">
           <div>
             <p className="mb-4 font-semibold text-lg md:text-xl">Resources</p>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 text-center">
               <NavLink to="/test">Take the test</NavLink>
               <NavLink to="/cities">Cities</NavLink>
               <NavLink to="/about">About us</NavLink>
@@ -24,7 +24,9 @@ function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 font-semibold text-lg md:text-xl">Follow Us</p>
+            <p className="mb-4 font-semibold text-lg md:text-xl text-center">
+              Follow Us
+            </p>
             <ul className="flex gap-6 justify-center md:justify-start">
               <li className="flex flex-col items-center gap-1">
                 <a

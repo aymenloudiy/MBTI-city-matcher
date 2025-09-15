@@ -37,7 +37,7 @@ const AboutUsCards: FC = () => {
             alt={member.name}
             className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
           />
-          <h3 className="text-xl font-bold font-[geo] text-[#C62828] mb-1">
+          <h3 className="text-xl font-bold font-[geologica] text-[#C62828] mb-1">
             {member.name}
           </h3>
           <p className="text-gray-700 font-semibold mb-3">{member.role}</p>
