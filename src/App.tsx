@@ -12,7 +12,6 @@ function App() {
       <div className="flex justify-center items-stretch grow">
         <Outlet />
       </div>
-      {/* !TODO: Make sure this works */}
       <ToTop />
       <Toaster position="bottom-center" toastOptions={{ duration: 2000 }} />
 
