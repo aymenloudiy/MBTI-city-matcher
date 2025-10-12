@@ -35,7 +35,7 @@ function MainBanner() {
         setCurrentCity(nextCity);
         setFade(true);
       }, 500);
-    }, 5000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
@@ -46,10 +46,7 @@ function MainBanner() {
     <section
       className="relative flex flex-col md:flex-row w-full px-6 md:px-16 mt-6 md:mt-12 py-12 rounded-2xl shadow-lg overflow-hidden"
       style={{
-        backgroundImage: `
-          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
-          url(${currentImage})
-        `,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url(${currentImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         transition: "opacity 0.5s ease-in-out",
@@ -73,7 +70,8 @@ function MainBanner() {
       <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/3 mt-8 md:mt-0 z-10">
         <NavLink
           to="/test"
-          className="w-full text-lg md:text-xl text-center font-[geologica] bg-[#C62828] text-[#ffffff] font-bold py-4 md:py-5 px-6 rounded-xl shadow-xl hover:bg-[#a31d1d] hover:scale-105 transition-all duration-300"
+          className="w-full text-lg md:text-xl text-center font-[geologica] bg-[#C62828] text-white font-bold py-4 md:py-5 px-6 rounded-xl shadow-xl 
+                     hover:bg-[#a31d1d] hover:scale-105 transition-all duration-300"
         >
           Start the Test →
         </NavLink>
