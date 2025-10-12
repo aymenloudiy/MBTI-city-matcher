@@ -35,25 +35,24 @@ function MainBanner() {
         setCurrentCity(nextCity);
         setFade(true);
       }, 500);
-    }, 3500);
-
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   const currentImage = getCityImage(currentCity);
+  console.log("Current city image:", currentImage);
 
   return (
-    <section
-      className="relative flex flex-col md:flex-row w-full px-6 md:px-16 mt-6 md:mt-12 py-12 rounded-2xl shadow-lg overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url(${currentImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        transition: "opacity 0.5s ease-in-out",
-        opacity: fade ? 1 : 0,
-      }}
-    >
-      <div className="flex flex-col justify-center md:w-2/3 gap-3 md:gap-5 text-white text-center md:text-left z-10">
+    <section className="relative flex flex-col md:flex-row w-full px-6 md:px-16 mt-6 md:mt-12 py-12 rounded-2xl shadow-lg overflow-hidden min-h-[400px]">
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url(${currentImage})`,
+          opacity: fade ? 1 : 0,
+        }}
+      ></div>
+
+      <div className="relative flex flex-col justify-center md:w-2/3 gap-3 md:gap-5 text-white text-center md:text-left z-10">
         <h2 className="text-4xl md:text-6xl font-extrabold leading-snug md:leading-tight font-[bangers] tracking-wide drop-shadow-lg">
           <span className="block">Where’s your</span>
           <span className="block text-[#FFD700]">Maple City?</span>
@@ -67,17 +66,16 @@ function MainBanner() {
         </p>
       </div>
 
-      <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/3 mt-8 md:mt-0 z-10">
+      <div className="relative flex flex-col justify-center items-center md:items-start w-full md:w-1/3 mt-8 md:mt-0 z-10">
         <NavLink
           to="/test"
-          className="w-full text-lg md:text-xl text-center font-[geologica] bg-[#C62828] text-white font-bold py-4 md:py-5 px-6 rounded-xl shadow-xl 
-                     hover:bg-[#a31d1d] hover:scale-105 transition-all duration-300"
+          className="w-full text-lg md:text-xl text-center font-[geologica] bg-[#C62828] text-white font-bold py-4 md:py-5 px-6 rounded-xl shadow-xl hover:bg-[#a31d1d] hover:scale-105 transition-all duration-300"
         >
           Start the Test →
         </NavLink>
       </div>
 
-      <div className="absolute bottom-3 right-4 text-white/80 text-sm font-[geologica] tracking-wide">
+      <div className="absolute bottom-3 right-4 text-white/80 text-sm font-[geologica] tracking-wide z-10">
         📍 {currentCity.toUpperCase()}
       </div>
     </section>
