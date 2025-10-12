@@ -141,93 +141,95 @@ export default function ReviewSection() {
   }, [loading, error, reviews]);
 
   return (
-    <section className="w-full space-y-8 py-4 mb-4">
-      <h2 className="text-2xl md:text-4xl font-[geologica] font-bold text-[#C62828] text-center">
-        Recent Reviews
-      </h2>
+    <section className="relative flex flex-col w-screen min-h-[400px] md:min-h-[60vh] py-12 md:py-16 justify-center items-center overflow-hidden">
+      <div className="relative z-10 w-full max-w-6xl px-6 md:px-16 space-y-8 mb-4">
+        <h2 className="text-4xl md:text-6xl font-[geologica] font-bold text-[#C62828] text-center">
+          Recent Reviews
+        </h2>
 
-      <div className="rounded-2xl bg-gray-50 p-4 shadow-md">{content}</div>
+        <div className="rounded-2xl bg-gray-50 p-4 shadow-md">{content}</div>
 
-      <div className="rounded-2xl bg-gray-50 p-6 shadow-md">
-        <h3 className="mb-4 text-lg font-semibold font-[geologica] text-[#C62828] text-center">
-          Leave a review
-        </h3>
-        <form onSubmit={onSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="_hp"
-            className="hidden"
-            tabIndex={-1}
-            autoComplete="off"
-          />
-
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700 font-[geologica]"
-            >
-              Name
-            </label>
+        <div className="rounded-2xl bg-gray-50 p-6 shadow-md">
+          <h3 className="mb-4 text-lg font-semibold font-[geologica] text-[#C62828] text-center">
+            Leave a review
+          </h3>
+          <form onSubmit={onSubmit} className="space-y-4">
             <input
-              id="name"
-              name="name"
-              required
-              maxLength={80}
-              placeholder="Your name"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
+              type="text"
+              name="_hp"
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
             />
-          </div>
 
-          <div>
-            <label
-              htmlFor="rating"
-              className="block text-sm font-medium text-gray-700 font-[geologica]"
-            >
-              Rating (1–5)
-            </label>
-            <input
-              id="rating"
-              name="rating"
-              type="number"
-              min={1}
-              max={5}
-              required
-              placeholder="5"
-              inputMode="numeric"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
-            />
-          </div>
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 font-[geologica]"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                required
+                maxLength={80}
+                placeholder="Your name"
+                className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
+              />
+            </div>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700 font-[geologica]"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              maxLength={800}
-              rows={4}
-              placeholder="What did you think?"
-              className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
-            />
-          </div>
+            <div>
+              <label
+                htmlFor="rating"
+                className="block text-sm font-medium text-gray-700 font-[geologica]"
+              >
+                Rating (1–5)
+              </label>
+              <input
+                id="rating"
+                name="rating"
+                type="number"
+                min={1}
+                max={5}
+                required
+                placeholder="5"
+                inputMode="numeric"
+                className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
+              />
+            </div>
 
-          {error && <p className="text-sm text-red-500">{error}</p>}
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 font-[geologica]"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                maxLength={800}
+                rows={4}
+                placeholder="What did you think?"
+                className="mt-1 w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-[#C62828] font-[nunito]"
+              />
+            </div>
 
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              disabled={submitting}
-              className="rounded-lg bg-[#C62828] hover:bg-[#a31d1d] px-4 py-2 text-white font-semibold disabled:opacity-50 transition-colors duration-200 font-[geologica]"
-            >
-              {submitting ? "Submitting…" : "Post Review"}
-            </button>
-          </div>
-        </form>
+            {error && <p className="text-sm text-red-500">{error}</p>}
+
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                disabled={submitting}
+                className="rounded-xl bg-[#C62828] hover:bg-[#a31d1d] px-8 py-4 text-white text-lg md:text-xl font-semibold disabled:opacity-50 transition-colors duration-200 font-[geologica]"
+              >
+                {submitting ? "Submitting…" : "Post Review"}
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );
