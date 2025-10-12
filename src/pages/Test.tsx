@@ -73,11 +73,6 @@ export default function QuizTestPage() {
             questions, each with two options—just pick whichever feels more like
             you. Ready to find your city?
           </p>
-          <p className="mt-2 text-xs text-[#c62828] text-center ">
-            This test only gives a guess of your MBTI, so don’t take it too
-            seriously—just have fun! If you want a proper MBTI test, try the
-            “What is MBTI” button on our homepage.
-          </p>
         </header>
 
         {!mbti || !city || !profile ? (
