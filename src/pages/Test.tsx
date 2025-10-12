@@ -87,26 +87,8 @@ export default function QuizTestPage() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-100 via-gray-50 to-white py-10 px-4">
       <div className="mx-auto max-w-3xl">
-        {!mbti && !city && !profile && (
-          <div className="mb-6 flex flex-col items-center">
-            <div className="flex items-center justify-center space-x-2 mb-2">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <div
-                  key={i}
-                  className={`w-4 h-4 rounded-full border border-gray-400 ${
-                    i < filledDots ? "bg-[#C62828]" : "bg-transparent"
-                  } transition-colors duration-500`}
-                />
-              ))}
-            </div>
-            <span className="text-sm md:text-base font-[geologica] text-[#C62828] font-semibold">
-              {Math.round(progressPercent)}%
-            </span>
-          </div>
-        )}
-
         {!mbti && !city && !profile && !isFinishing && (
-          <header className="mb-8">
+          <header className="mb-4">
             <h1 className="text-4xl font-bold text-center text-[#C62828] font-[bangers] tracking-wider">
               Take a quick test to find your matching city
             </h1>
@@ -119,9 +101,29 @@ export default function QuizTestPage() {
           </header>
         )}
 
+        {!mbti && !city && !profile && (
+          <div className="mb-3 flex items-center justify-center space-x-4">
+            <div className="flex items-center space-x-2">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`w-4 h-4 rounded-full border ${
+                    i < filledDots
+                      ? "border-gray-300 bg-[#C62828]"
+                      : "border-gray-200 bg-gray-100"
+                  } transition-colors duration-500`}
+                />
+              ))}
+            </div>
+            <span className="text-sm md:text-base font-[geologica] text-[#C62828] font-semibold">
+              {Math.round(progressPercent)}%
+            </span>
+          </div>
+        )}
+
         {isFinishing && (
           <div className="flex flex-col items-center justify-center py-20 space-y-4">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-[#C62828] border-gray-200"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-[#C62828] border-opacity-30"></div>
             <p className="text-lg font-[geologica] text-gray-700">
               Your matching 🇨🇦Canadian city is…
             </p>
