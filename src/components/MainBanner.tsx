@@ -40,7 +40,6 @@ function MainBanner() {
   }, []);
 
   const currentImage = getCityImage(currentCity);
-  console.log("Current city image:", currentImage);
 
   return (
     <section
